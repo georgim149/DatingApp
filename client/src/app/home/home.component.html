@@ -1,0 +1,16 @@
+<div class="container mt-5" *ngIf="!registerMode">
+    <div style="text-align: center;">
+        <h1>Find your match!</h1>
+        
+        <button class="btn mr-2 btn-large btn-primary" (click)="registerModeToggle()">Register</button>
+        <button class="btn btn-large btn-info">Learn more</button>
+    </div>
+</div>
+
+<div class="container" *ngIf="registerMode">
+    <div class="row justify-content-center">
+        <div class="col-4">Form goes here</div>
+        <div><button class="btn btn-info" (click)="registerModeToggle()">Back</button></div>
+        
+    </div>
+</div>
