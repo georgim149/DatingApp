@@ -9,8 +9,8 @@
 
 <div class="container" *ngIf="registerMode">
     <div class="row justify-content-center">
-        <div class="col-4">Form goes here</div>
-        <div><button class="btn btn-info" (click)="registerModeToggle()">Back</button></div>
+        <div class="col-4"><app-register (cancelEvent)="cancelEventMode($event)"></app-register></div>
+        
         
     </div>
 </div>
