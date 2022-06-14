@@ -24,10 +24,10 @@ export class MembersService {
   {
     
     
-    return this.http.get<Member[]>(this.baseUrl + 'users', this.httpOptions);
+    return this.http.get<Member[]>(this.baseUrl + 'users');
   }
   GetMember(username : string)
   {
-    return this.http.get<Member>(this.baseUrl + "users/" + username + this.httpOptions);
+    return this.http.get<Member>(this.baseUrl + "users/" + username);
   }
 }
