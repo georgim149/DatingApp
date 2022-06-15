@@ -23,10 +23,11 @@ import { ServerErrorComponent } from './errors/server-error/server-error.compone
 import { MemberCardComponent } from './members/member-card/member-card.component';
 import { JwtInterceptor } from './_interceptors/jwt.interceptor';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+import { MemberEditComponent } from './members/member-edit/member-edit.component';
 
 @NgModule({
   schemas: [
-    NO_ERRORS_SCHEMA
+    NO_ERRORS_SCHEMA,
   ],
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
     TestErrorsComponent,
     NotFoundComponent,
     ServerErrorComponent,
-    MemberCardComponent
+    MemberCardComponent,
+    MemberEditComponent
   ],
   imports: [
     BrowserModule,
