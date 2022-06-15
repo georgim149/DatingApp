@@ -21,9 +21,5 @@ export class MemberDetailComponent implements OnInit {
     this.memberService.GetMember(this.route.snapshot.paramMap.get('username')).subscribe( mem =>{
       this.member = mem;
     })
-    if(this.member)
-    {
-      console.log('here');
-    }
   }
 }
