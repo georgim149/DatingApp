@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule, HTTP_INTERCEPTORS} from "@angular/common/http";
 
@@ -25,6 +25,9 @@ import { JwtInterceptor } from './_interceptors/jwt.interceptor';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 
 @NgModule({
+  schemas: [
+    NO_ERRORS_SCHEMA
+  ],
   declarations: [
     AppComponent,
     NavComponent,
