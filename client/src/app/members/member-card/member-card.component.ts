@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Member } from 'src/app/_models/Member';
+import { MembersService } from 'src/app/_services/members.service';
 
 @Component({
   selector: 'app-member-card',
@@ -9,12 +11,13 @@ import { Member } from 'src/app/_models/Member';
 export class MemberCardComponent implements OnInit {
 
   @Input() member: Member;
-  constructor() {
+  constructor(private memberService : MembersService, private route: ActivatedRoute) {
     
    }
 
   ngOnInit(): void {
     
   }
+  
 
 }

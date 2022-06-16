@@ -33,7 +33,7 @@ export class MemberDetailComponent implements OnInit {
     
   }
 
-  getImages(): NgxGalleryImage[]
+  /*getImages(): NgxGalleryImage[]
   {
     const photoUrls = [];
     for(const photo of this.member.photos)
@@ -45,13 +45,13 @@ export class MemberDetailComponent implements OnInit {
       })
     }
     return photoUrls;
-  }
+  }*/
   loadMember()
   {
     this.memberService.GetMember(this.route.snapshot.paramMap.get('user')).subscribe( mem =>{
       console.log(mem);
       this.member = mem;
-      this.galleryImages = this.getImages();
+      //this.galleryImages = this.getImages();
     })
   }
 }
