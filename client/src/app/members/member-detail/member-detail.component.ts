@@ -13,10 +13,12 @@ export class MemberDetailComponent implements OnInit {
   member: Member
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
-  constructor(private memberService: MembersService, private route: ActivatedRoute) { }
+  constructor(private memberService: MembersService, private route: ActivatedRoute) {
+    this.loadMember();
+   }
 
   ngOnInit(): void {
-    this.loadMember();
+    
     this.galleryOptions = [
       {
         width: '500px',
@@ -46,7 +48,8 @@ export class MemberDetailComponent implements OnInit {
   }
   loadMember()
   {
-    this.memberService.GetMember(this.route.snapshot.paramMap.get('username')).subscribe( mem =>{
+    this.memberService.GetMember(this.route.snapshot.paramMap.get('user')).subscribe( mem =>{
+      console.log(mem);
       this.member = mem;
       this.galleryImages = this.getImages();
     })

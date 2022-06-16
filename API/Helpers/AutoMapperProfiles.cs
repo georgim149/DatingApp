@@ -18,6 +18,7 @@ namespace API.Helpers
             options.MapFrom(src => src.Photos.FirstOrDefault(one => one.IsMain).Url))
             .ForMember(one => one.Age , option => option.MapFrom(src => src.DateOfBirth.CalcAge()));
             CreateMap<Photo, PhotoDto>();
+            CreateMap<MemberUpdateDTO, AppUser>();
         }
     }
 }

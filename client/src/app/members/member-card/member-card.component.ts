@@ -9,9 +9,12 @@ import { Member } from 'src/app/_models/Member';
 export class MemberCardComponent implements OnInit {
 
   @Input() member: Member;
-  constructor() { }
+  constructor() {
+    
+   }
 
   ngOnInit(): void {
+    
   }
 
 }
