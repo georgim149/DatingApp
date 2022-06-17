@@ -27,6 +27,7 @@ import { MemberEditComponent } from './members/member-edit/member-edit.component
 import {NgxSpinnerModule} from 'ngx-spinner'
 import { BusyService } from './_services/busy.service';
 import { LoadingInterceptor } from './_interceptors/loading.interceptor';
+import { EditorComponent } from './members/editor/editor.component';
 
 @NgModule({
   schemas: [
@@ -45,7 +46,8 @@ import { LoadingInterceptor } from './_interceptors/loading.interceptor';
     NotFoundComponent,
     ServerErrorComponent,
     MemberCardComponent,
-    MemberEditComponent
+    MemberEditComponent,
+    EditorComponent
   ],
   imports: [
     BrowserModule,
